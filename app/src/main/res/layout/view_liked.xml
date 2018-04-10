@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:alpha="0.8"
+	android:background="#03a9f4">
+
+	<android.support.v7.widget.RecyclerView
+		android:id="@+id/dialog_fragment_like_recyclerview"
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"/>
+
+</LinearLayout>
+

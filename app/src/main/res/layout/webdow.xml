@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+
+	<WebView
+		android:id="@+id/kwebviewlayoutWebView"
+		android:layout_height="0dp"
+		android:layout_width="match_parent"
+		android:layout_weight="13"/>
+
+	<ProgressBar
+		android:id="@+id/kwebviewlayoutProgressBar"
+		style="?android:attr/progressBarStyleHorizontal"
+		android:layout_height="10dp"
+		android:colorForeground="#ffffff"
+		android:layout_width="match_parent"/>
+
+	<LinearLayout
+		android:id="@+id/kwebviewlayoutLinearLayout"
+		android:layout_height="0dp"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:layout_weight="1.0">
+
+		<TextView
+			android:id="@+id/kwebviewlayoutForwardTextView"
+			android:layout_height="match_parent"
+			android:layout_width="0dp"
+			android:text="forw"
+			android:layout_weight="1.0"
+			android:gravity="center"/>
+		
+		<TextView
+			android:id="@+id/kwebviewlayoutLikeTextView"
+			android:layout_height="match_parent"
+			android:layout_width="0dp"
+			android:text="like"
+			android:layout_weight="1.0"
+			android:gravity="center"/>
+
+		<TextView
+			android:id="@+id/kwebviewlayoutReflashTextView"
+			android:layout_height="match_parent"
+			android:layout_width="0dp"
+			android:text="reflash"
+			android:layout_weight="1.0"
+			android:gravity="center"/>
+
+		<TextView
+			android:id="@+id/kwebviewlayoutBackTextView"
+			android:layout_height="match_parent"
+			android:layout_width="0dp"
+			android:text="back"
+			android:layout_weight="1.0"
+			android:gravity="center"/>
+
+		<TextView
+			android:id="@+id/kwebviewlayoutCopyTextView"
+			android:layout_height="match_parent"
+			android:layout_width="0dp"
+			android:text="copy"
+			android:layout_weight="1.0"
+			android:gravity="center"/>
+
+	</LinearLayout>
+
+</LinearLayout>
+
