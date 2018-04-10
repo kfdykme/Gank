@@ -22,6 +22,7 @@ class LikedPresenter(val view: LikedView,val l:OnDetachListener):BasePresenter{
     fun openWebDow(liked: Likes){
         GankActivity.gankPresenter.openWebDow(liked)
 
+        detach()
     }
 
     override fun detach() {

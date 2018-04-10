@@ -4,6 +4,7 @@ package xyz.kfdykme.gank
 import android.os.Bundle
 import android.support.v4.widget.DrawerLayout
 import android.support.design.widget.NavigationView
+import android.support.design.widget.Snackbar
 import android.support.v4.app.FragmentActivity
 import android.view.View
 import android.view.ViewGroup
@@ -12,6 +13,7 @@ import xyz.kfdykme.gank.base.BasePresenter
 import xyz.kfdykme.gank.base.OnDetachListener
 import xyz.kfdykme.gank.likes.LikedPresenter
 import xyz.kfdykme.gank.likes.LikedView
+import xyz.kfdykme.gank.search.SearchPresenter
 import xyz.kfdykme.gank.search.SearchView
 import java.util.*
 
@@ -118,15 +120,22 @@ class GankActivity : FragmentActivity(),OnDetachListener {
                     cPresenter = likedPresenter
 
 
+                    Snackbar.make(container!!,"Liked",Snackbar.LENGTH_SHORT).show()
 
                     //Toast.makeText(this@GankActivity, "Selected Liked", Toast.LENGTH_SHORT).show()
                 }
                 R.id.nav_search -> {
 
-                    SearchView().show(supportFragmentManager, "search_dialog_fragmeng")
+                    presenters.push(cPresenter)
+                    var searchPresenter = SearchPresenter(
+                            SearchView(container!!),
+                            this
+                    )
+                    searchPresenter.attach()
+                    cPresenter = searchPresenter
 
-                    Toast.makeText(this@GankActivity, "Selected Search", Toast.LENGTH_SHORT).show()
-                }
+                    Snackbar.make(container!!,"Selected Search",Snackbar.LENGTH_SHORT).show()
+            }
             }
 
             false

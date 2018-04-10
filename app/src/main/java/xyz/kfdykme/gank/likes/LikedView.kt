@@ -63,7 +63,6 @@ public class LikedView(val parent: ViewGroup) {
 
             presenter?.openWebDow(adapter!!.mLikes[position])
 
-            deAttach()
         }
 
         adapter!!.setOnItemLongClickListener { position ->
